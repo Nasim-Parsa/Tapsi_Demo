@@ -692,21 +692,23 @@ height: 478px;
         rgba(23, 26, 60, 0.7) 5%,
         rgba(23, 26, 60, 0.3) 95%
     );
-    padding: 40px;
+    padding: 16px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    width: 270px;
+    align-items: center;
+    max-width: 300px;
 }
 
 .intro-btn h1 {
 font-size: 2.5rem;
 color: #fff;
+margin-top: 0;
 }
 .intro-btn h2 {
     font-size: 1.6rem;
     color: #fff;
-    margin-bottom:  3rem;
+    margin-bottom:  2.5rem;
 }
 
 .intro-btn__passenger{
@@ -724,14 +726,23 @@ color: #fff;
 }
 
 .intro-btn__passenger{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-around ;
 }
 
 .intro-btn__passenger p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
+.intro-btn__passenger > i {
+    color: #000;
+  }
+  .intro-btn__passenger.driver-intro {
+    border: 2px solid #fff;
+    background-color: rgba(23, 26, 60, 0.5) !important;
+    color: #fff;
+  }
 .banner-phone {
     display: none;
     position: absolute;
@@ -743,6 +754,7 @@ color: #fff;
 @media screen and (min-width:768px) {
     .hero-wrapper{
         justify-content: flex-start;
+        right: 0;
     }
     .intro-wrapper{
         flex-direction:row; 
@@ -750,8 +762,9 @@ color: #fff;
         align-items: center; 
     }
     .intro-btn{
-        width: 530px; 
-        padding: 25px;
+        width: 500px; 
+        max-width: 500px;
+        padding: 0 25px;
         border-radius: 20px;
     }
     .intro-btn h1 {
@@ -760,10 +773,11 @@ color: #fff;
 
     .intro-btn h2 {
         font-size: 2.5rem;
+        font-weight: 400;
         }
 
     .intro-btn__passenger p {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
         .banner-phone {
             display: block;
@@ -772,10 +786,11 @@ color: #fff;
 }
 
 @media screen and (max-width:768px) {
-    .hero-section img{
+    .hero-section .banner-img{
         height: 100vh;  
         object-fit: cover;
     }
+
 }
 
 
@@ -804,7 +819,8 @@ color: #fff;
 max-width: 85px;
 }
 .services__tabs .tab{
-   opacity: 0.5; 
+   opacity: 0.5;
+   cursor: pointer; 
    transition: all 0.3s ease-out;
 }
 .services__tabs .tab:hover{
@@ -826,12 +842,13 @@ max-width: 85px;
  }
 
  .tab-content{
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.feature__detail{
+.services .feature__detail{
     width: 100%;
 }
 
@@ -879,6 +896,12 @@ max-width: 85px;
 
 .block-heading {
     margin-top: 6rem;
+}
+
+@media screen and (max-width:768px) {
+    .block-heading {
+        margin-top: 50rem;
+    }   
 }
 
 .travell__slides{
